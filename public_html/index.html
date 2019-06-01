@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Original Trombones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Accessing google fonts for 'Oxygen' and 'Ropa Sans' font types for content display.-->
+        <link href="https://fonts.googleapis.com/css?family=Oxygen|Ropa+Sans&display=swap" rel="stylesheet">
+        
+        
+        <style>
+            .main-font {
+                font-family: 'Oxygen', sans-serif;
+            }
+            body {
+                background-color: hsl(0, 0%, 95%);
+            }
+            .container {
+                font-family: 'Ropa Sans', sans-serif;
+                width: 100%;
+                height: 150px;
+                background-color: hsl(0, 0%, 95%);
+                display: grid;
+                grid-template-columns: 50px 150px 5fr 1fr 1fr 1fr 1fr;
+                grid-column-gap: 6px;
+            }
+            .logo-image {
+                display: inline;
+                width: 125px;
+                height: 150px;
+            }
+            h1 {
+                position: relative;
+                left: 80px;
+                bottom: 50px;
+                font-size: 45px;
+            }
+            .email-address {
+                display: block;
+                margin: auto;
+                width: 600px;
+                line-height: 10px;
+                font-size: 25px;
+            }
+            [type="text"] {
+                width:400px;
+                height: 20px;
+                position: relative;
+                left: 50px;
+                bottom: 10px;
+            }
+            [type="submit"] {
+                background-color: orange;
+                font-weight: 600;
+                font-size: 20px;
+                width: 160px;
+                height: 35px;
+                position: relative;
+                top: 40px;
+                right: 230px;
+            }
+            [type="submit"]:hover {
+                background: linear-gradient(35deg, lightblue, lightskyblue, lightcyan);
+            }
+            .features-container {
+                display: block;
+                margin-left: 300px;
+                margin-top: 150px;
+                width: 725px;
+                word-wrap: break-word;
+            }
+            #premium {
+                position: relative;
+                top: 70px;
+                right: 50px;
+            }
+            p {
+                position: relative;
+                bottom: 18px;
+            }
+            #shipping {
+                position: relative;
+                right: 55px;
+                bottom: 90px;
+            }
+            .inline-last-quality {
+                position: relative;
+                bottom: 80px;
+            }
+            #assurance-header {
+                position: relative;
+                bottom: 61px;
+            }
+            #assurance {
+                position: relative;
+                right: 70px;
+                bottom: 153px;
+            }
+            iframe {
+                frameborder: 0;
+                allow: accelerometer autoplay encrypted-media gyroscope picture-in-picture;
+                position: relative;
+                left: 375px;
+                bottom: 100px;
+            }
+            .price-box {
+                width: 200px;
+                word-wrap: break-word;
+                
+                border: solid;
+                border-width: thin;
+                border-color: black;
+                padding: 70px;
+            }
+            .header-price-position {
+                position: relative;
+                bottom: 80px;
+                left: 20px;
+            }
+            .price-position {
+                font-weight: 700;
+                font-size: 20px;
+                position: relative;
+                left: 75px;
+                bottom: 70px;
+            }
+            .centre-of-border {
+                position: relative;
+                left: 55px;
+            }
+            .centre-of-border2 {
+                position: relative;
+                left: 35px;
+            }
+            .price-button-position {
+                position: relative;
+                left: 25px;
+            }
+            .grid-container {
+                display: grid;
+                min-height: 300px;
+                min-width: 130px;
+                max-width: 1200px;
+                grid-template-columns: 140px 140px 140px;
+                grid-column-gap: 230px;
+                position: relative;
+                left: 130px;
+            }
+            a {
+                font-size: 25px;
+                position: relative;
+                top: 50px;
+                color: black;
+                text-decoration: none;
+            }
+            .pricing-position {
+                position: relative;
+                left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="container">
+                <img class="logo-image" src="https://media3.giphy.com/media/Hozyhzd9RXkvm/giphy.gif" alt="A Trombone">
+                <h1><a href="index.html">Original Trombones</a></h1>
+                <p></p>
+                <a href="#premium">Features</a>
+                <a href="#video">How It Works</a>
+                <a class="pricing-position" href="#price">Pricing</a>
+                <a href="survey.html">Survey</a>
+            </div>
+            <!--The email form which displays a custom error message if the correct format is not followed and 'Get Started' 
+            is clicked on.-->
+            <div class="email-address main-font">
+                <h3>Handcrafted, home-made masterpeices</h3>
+                <form>
+                    <!--Simply displays the error message until the correct format is entered. Displays my custom error message first,
+                    then displays the default error message until correct format entered.-->
+                    <input type="text" placeholder="Enter your email address" pattern="[A-Z,a-z]*@[.,A-Z,a-z]+" required oninvalid="this.setCustomValidity('Please include an @ in the email address or enter valid organisation names.')" oninput="this.setCustomValidity('')">
+                    <button type="submit">Get Started</button>
+                </form>
+            </div>
+            <!--The section responsible for the explicit advertisement of the qualities of the business.-->
+            <div class="features-container">
+                <img id="premium" src="features.png" alt="Features">
+                <h3>Premium Materials</h3>
+                <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+                <h3>Fast Shipping</h3>
+                <p>We make sure you receive your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+                <img id="shipping" src="shipping.png" alt="Delivery Van">
+                <h3 id="assurance-header">Quality Assurance</h3>
+                <p class="inline-last-quality">For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+                <img id="assurance" src="assurance.png" alt="An image of a battery - quality.">
+            </div>
+            <!--Embedding a YouTube video into the website with user controls via 'iframe' styling, to manipulate the video.-->
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/SBVU_ejKHfI?start=50" allowfullscreen></iframe>
+            <div class="grid-container">    
+                <div id="price" class="price-box low-position">
+                    <h4 class="header-price-position">TENOR TROMBONE</h4>
+                    <p class="price-position">£350</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <p class="centre-of-border2">Lorem ipsum dolor.</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <button class="price-button-position" type="submit">Select</button>
+                </div>
+                <div class="price-box standard-position">
+                    <h4 class="header-price-position">BASS TROMBONE</h4>
+                    <p class="price-position">£650</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <p class="centre-of-border2">Lorem ipsum dolor.</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <button class="price-button-position" type="submit">Select</button>
+                </div>
+                <div class="price-box premium-position">
+                    <h4 class="header-price-position">VALVE TROMBONE</h4>
+                    <p class="price-position">£900</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <p class="centre-of-border2">Lorem ipsum dolor.</p>
+                    <p class="centre-of-border">Lorem ipsum.</p>
+                    <button class="price-button-position" type="submit">Select</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Survey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Accessing google fonts for 'Oxygen' and 'Ropa Sans' font types.-->
+        <link href="https://fonts.googleapis.com/css?family=Oxygen|Ropa+Sans&display=swap" rel="stylesheet">
+        
+        <style>
+            .main-font {
+                font-family: 'Oxygen', sans-serif;
+            }
+            body {
+                background-color: hsl(0, 0%, 95%);
+            }
+            .container {
+                font-family: 'Ropa Sans', sans-serif;
+                width: 100%;
+                height: 150px;
+                background-color: hsl(0, 0%, 95%);
+                display: grid;
+                grid-template-columns: 50px 150px 5fr 1fr 1fr 1fr 1fr;
+                grid-column-gap: 6px;
+            }
+            .logo-image {
+                display: inline;
+                width: 125px;
+                height: 150px;
+            }
+            h1 {
+                position: relative;
+                left: 80px;
+                bottom: 50px;
+                font-size: 45px;
+            }
+            a {
+                font-size: 25px;
+                position: relative;
+                top: 50px;
+                color: black;
+                text-decoration: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            .pricing {
+                position: relative;
+                left: 30px;
+            }
+            h3 {
+                display: block;
+                margin: auto;
+                width: 145px;
+                
+                position: relative;
+                top: 10px;
+                
+                font-family: 'Ropa Sans', sans-serif;
+                font-size: 30px;
+            }
+            [type="number"] {
+                padding: 5px;
+                position: relative;
+                top: 30px;
+            }
+            .form-container {
+                width: 70%;
+                height: 500px;
+                border-radius: 10px;
+                background-color: white;
+                
+                position: relative;
+                top: 20px;
+                margin: auto;
+                font-size: 20px;
+                text-align: center;
+            }
+            .text-container {
+                display: inline-block;
+                margin: auto;
+                width: 300px;
+                height: 400px;
+                word-wrap: break-word;
+                text-align: right;
+                
+                position: relative;
+                right: 180px;
+            }
+            .input-container {
+                display: block;
+                margin: auto;
+                width: 300px;
+                height: 300px;
+                word-wrap: break-word;
+                text-align: left;
+                
+                position: relative;
+                bottom: 410px;
+                left: 150px;
+            }
+            select {
+                position: absolute;
+                top: 80px;
+                right: 162px;
+                padding:5px;
+            }
+            label {
+                position: relative;
+                top: 100px;
+            }
+            .definitely {
+                position: relative;
+                top: 130px;
+            }
+            .delivery {
+                position: relative;
+                top: 175px;
+                right: 170px;
+            }
+            .quality {
+                position: absolute;
+                top: 223px;
+                right: 105px;
+            }
+            .product {
+                position: absolute;
+                top: 260px;
+                right: 155px;
+            }
+            .design-position {
+                position: absolute;
+                top: 242px;
+                right: 148px;
+            }
+            .suggestions-position {
+                position: relative;
+                top: 50px;
+            }
+            textarea {
+                position: absolute;
+                top: 300px;
+                left: 5px;
+            }
+            button {
+                position: absolute;
+                top: 405px;
+                left: -40px;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="container">
+                <img class="logo-image" src="https://media3.giphy.com/media/Hozyhzd9RXkvm/giphy.gif" alt="A Trombone">
+                <h1><a href="index.html">Original Trombones</a></h1>
+                <p></p>
+                <a href="index.html#premium">Features</a>
+                <a href="index.html#video">How It Works</a>
+                <a class="pricing" href="index.html#price">Pricing</a>
+                <a href="survey.html">Survey</a>
+            </div>
+            <h3>Survey Form</h3>
+            <!--A form to allow the user to rate the services of the business.-->
+            <!--Classes to give positioning and display format for the form.-->
+            <div class="form-container">
+                <p>Please give us feedback on our services!</p>
+                <div class="text-container">
+                    <p>Age:</p>
+                    <p>Occupation: </p>
+                    <p>How likely are you to recommend our services?</p>
+                    <p>Things that can be improved (Tick all that apply):</p>
+                    <p class="suggestions-position">Any comments or suggestions?</p>
+                </div>
+                <div class="input-container">
+                    <form>
+                        <input type="number" placeholder="Enter your age" required>
+                        <select>
+                            <!--Allows a non-selectable option, thus creating a placeholder for the drop-down list.-->
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="student">Student</option>
+                            <option value="full-time-job">Full Time Job</option>
+                            <option value="full-time-learner">Full Time Learner</option>
+                            <option value="prefer-not-say">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <!--Radio Button group allowing a recommendation selection.-->
+                        <label for="definitely" class="definitely">
+                            <input  id="definitely" type="radio" name="recommendation">Definitely
+                        </label>
+                        <label for="maybe">
+                            <input id="maybe" type="radio" name="recommendation">Maybe
+                        </label>
+                        <label for="not-sure">
+                            <input id="not-sure" type="radio" name="recommendation">Not sure
+                        </label>
+                        <!--Checkboxes for the improvements question. 'name' allows a checkbox to associate with other checkboxes of the same 
+                        name forming a group and having same 'for' and 'id' name allows linking the 'input' tag to the 'label' tag.-->
+                        <label for="delivery-service" class="delivery">
+                            <input id="delivery-service" type="checkbox" name="improvement">Delivery
+                        </label>
+                        <label for="quality" class="quality">
+                            <input id="quality" type="checkbox" name="improvement">Quality of Trombone
+                        </label>
+                        <label for="design" class="design-position">
+                            <input id="design" type="checkbox" name="improvement">Website Design
+                        </label>
+                        <label for="product" class="product">
+                            <input id="product" type="checkbox" name="improvement">More products
+                        </label>
+                        <textarea rows="4" cols="50" placeholder="Enter your comment here..."></textarea>
+                    </form>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
